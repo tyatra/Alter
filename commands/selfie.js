@@ -3,7 +3,7 @@ module.exports = {
   exec: (client, message, content, args) => {
     message.send("Surely, master, please wait a moment");
     request({
-      url: 'https://safebooru.donmai.us/posts.json?random=true&limit=1&tags=felicia_%28fire_emblem_fates%29',
+      url: 'https://safebooru.donmai.us/posts.json?random=true&limit=1&tags=felicia_%28fire_emblem_if%29',
       json: true
     }, function (err, temp, body) {
       if (!err && body.length > 0 && body[0].file_url) {
