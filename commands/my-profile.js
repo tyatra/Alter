@@ -1,6 +1,6 @@
 exports.func = (user, obj) => {
   embed = {
-    title: "FGO Profile for " + user.username,
+    title: "FE Profile for " + user.username,
     fields: [
       {
         name: "IGN",
@@ -18,7 +18,7 @@ exports.func = (user, obj) => {
   return embed;
 }
 exports.exec = (client, message, content, args) => {
-  message.send("Surely senpai, please wait a moment");
+  message.send("Surely master, please wait a moment");
   func = this.func;
   if (args) {
 
@@ -44,7 +44,7 @@ exports.exec = (client, message, content, args) => {
         obj = JSON.parse(result);
         message.channel.sendMessage('', {embed: func(message.author, obj)});
       } else {
-        message.channel.sendMessage("Profile not found senpai, attach an argument to create one");
+        message.channel.sendMessage("Profile not found master, attach an argument to create one");
       }
     }
   })
