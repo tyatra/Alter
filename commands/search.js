@@ -11,8 +11,8 @@ module.exports = {
             body = body.slice(body.indexOf('/url?q=') + 7);
             body = body.slice(0, body.indexOf('&'));
             body = decodeURIComponent(body);
-            message.send("senpai, I found this website. I hope this is what you are looking for.\n" + body);
-          } else message.send("Sorry senpai, I couldn't find anything");
+            message.send("master, I found this website. I hope this is what you are looking for.\n" + body);
+          } else message.send("Sorry master, I couldn't find anything");
         }
         message.channel.stopTyping();
       });

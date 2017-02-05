@@ -20,7 +20,7 @@ module.exports = {
           if (tzOffset[tz]) offset = tzOffset[tz];
           else offset = parseInt(tz.slice(3));
           if (offset < -11 || offset > 12) {
-            message.send("senpai, that timezone is invalid!", "serious");
+            message.send("master, that timezone is invalid!", "serious");
           } else {
             if (!content.includes('local')) {
                 h = localTZ - offset + h;
@@ -50,7 +50,7 @@ module.exports = {
           if (tzOffset[tz[1]]) offset[1] = tzOffset[tz[1]];
           else offset[1] = parseInt(tz[1].slice(3));
           if (Math.min(offset[0], offset[1]) < -11 || Math.max(offset[0], offset[1]) > 12)
-            message.send('senpai, that timezone is invalid!', "serious");
+            message.send('master, that timezone is invalid!', "serious");
           else {
             if (content.startsWith("what") || content.startsWith("wat")) {
               if (content.indexOf(tz[0]) < content.indexOf(match)) {
@@ -79,21 +79,21 @@ module.exports = {
           info += " in the same day";
         }
         if (h < 10) h = "0" + h;
-        message.send("It will be " + h + ":" + m + " at " + info + ", senpai.");
+        message.send("It will be " + h + ":" + m + " at " + info + ", master.");
       }
     } else {
       if (match = content.match(regex)) {
         if (tzOffset[match[0]]) offset = tzOffset[match[0]];
         else offset = parseInt(match[0].slice(3));
         if (offset < -11 || offset > 12) {
-          message.send("senpai, that timezone is invalid!", "serious");
+          message.send("master, that timezone is invalid!", "serious");
         } else {
           offset = offset * 60 * 60 * 1000;
           date.setTime( date.getTime() + offset );
-          message.send("senpai, the current time in " + match[0].toUpperCase() + " is " + date.toUTCString().slice(0, -3));
+          message.send("master, the current time in " + match[0].toUpperCase() + " is " + date.toUTCString().slice(0, -3));
         }
       } else {
-        message.send("senpai, the current local time is " + date.toLocaleString());
+        message.send("master, the current local time is " + date.toLocaleString());
       }
     }
   }

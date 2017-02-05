@@ -1,5 +1,5 @@
 module.exports = {
   exec: (client, message, content, args) => {
-    message.send("Yes senpai. I'm here.");
+    message.send("Yes master. I'm here.");
   }
 }

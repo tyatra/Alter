@@ -3,7 +3,7 @@ module.exports = {
   exec: (client, message, content, args) => {
     if (content.match(/\bstart\b/g)) {
       timer[message.author.id] = Date.now();
-      message.send("Roger! The timer has started! Good luck, senpai!");
+      message.send("Roger! The timer has started! Good luck, master!");
     } else if (content.match(/\bstop\b/g)) {
       if (timer[message.author.id]) {
         timer[message.author.id] = Date.now() - timer[message.author.id];
@@ -17,7 +17,7 @@ module.exports = {
         if (s < 10) s = "0" + s;
         timer[message.author.id] = timer[message.author.id] % 1000;
         if (timer[message.author.id] < 10) timer[message.author.id] = "0" + timer[message.author.id];
-        message.send("The timer has stopped! The screen says " + h + ":" + m + ":" + s + "." + timer[message.author.id] + ", senpai!");
+        message.send("The timer has stopped! The screen says " + h + ":" + m + ":" + s + "." + timer[message.author.id] + ", master!");
         delete timer[message.author.id];
       }
     }
